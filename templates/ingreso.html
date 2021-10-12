@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ingreso</title> 
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
+	
+ <style type ="text/css">
+    body {
+font-family: Arial, Helvetica, sans-serif;
+margin: 1;
+background-image: url(https://www.cuadrosguapos.com/images/product_images/popup_images/8641_0_MK_bodegon_frutas_verduras.jpg);
+background-size: cover;
+background-attachment: fixed;
+}
+* {
+box-sizing: border-box;
+}
+.contenedor{
+width: 100%;
+padding: 10px;
+background: #d0f4b9;
+}
+.formulario{
+background: #d0f4b9;
+margin-top: 150px;
+padding: 3px;
+}
+h1{
+text-align: center;
+color: #1a2537;
+font-size: 40px;
+}
+input[type="text"],
+input[type="password"]{
+font-size: 22px;
+width: 82%;
+padding: 12px;
+border: none;
+}
+.input-contenedor{
+margin-bottom: 15px;
+border: 2px solid #b9dff4;
+}
+.icon{
+min-width: 53px;
+text-align: center;
+color: #061b24;
+}
+.button{
+border: none;
+width: 100%;
+color: white;
+font-size: 20px;
+background:  #3e7fe0;
+padding: 15px 20px;
+border-radius: 8px;
+cursor: pointer;
+}
+.button:hover{
+background: cadetblue;
+}
+p{
+text-align: center;
+}
+.link{
+text-decoration: none;
+color: #1a2537;
+font-weight: 600;
+}
+.link:hover{
+color: cadetblue;
+}
+@media(min-width:768px)
+{
+.formulario{
+margin: auto;
+width: 500px;
+margin-top: 150px;
+border-radius: 5%;
+}
+}
+</style>
+
+</head>  
+<body>
+    <form class="formulario" action="/check_user" method="POST">
+    
+    <h1>Ingreso de usuario</h1>
+     <div class="contenedor">
+     
+     
+         
+         <div class="input-contenedor">
+         <i class="fas fa-envelope icon"></i>
+         <input type="text" name="email" placeholder="Correo Electronico"/>
+         
+         </div>
+         
+         <div class="input-contenedor">
+            <i class="fas fa-key icon"></i>
+         <input type="password" name="password" placeholder="Contraseña"/>
+         
+         </div>
+         <input type="submit" value="Ingresar" class="button">
+         <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
+         <p>¿No tienes una cuenta? <a class="link" href="/registro">Registrate </a></p>
+     </div>
+    </form>
+</body>
+</html>

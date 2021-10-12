@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Registrar Productos</title> 
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
+ <script src="https://kit.fontawesome.com/7c640bf6f9.js" crossorigin="anonymous"></script>
+	
+	
+    <style type ="text/css">
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 1;
+   background-image: url(https://img.freepik.com/foto-gratis/ingredientes-comida-italiana_23-2148551669.jpg?size=626&ext=jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+* {
+    box-sizing: border-box;
+}
+.contenedor{
+    width: 100%;
+    padding: 8px;
+    background: #d0f4b9;
+}
+.formulario{
+    background: #d0f4b9;
+    margin-top: 100px;
+    padding: 2px;
+}
+h1{
+    text-align: center;
+    color: #1a2537;
+    font-size: 40px;
+}
+input[type="text"]{
+    font-size: 15px;
+    width: 82%;
+    padding: 6px;
+    border: none;
+}
+.input-contenedor{
+    margin-bottom: 8px;
+    border: 2px solid #b9dff4;
+}
+.fas{
+    min-width: 53px;
+    text-align: center;
+    color: #061b24;
+}
+.button{
+    border: none;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    background:  #3e7fe0;
+    padding: 15px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 9px;
+    margin-bottom: 8px;
+}
+.button:hover{
+    background: cadetblue;
+}
+p{
+    text-align: center;
+}
+.link:hover{
+     color: cadetblue;
+}
+@media(min-width:768px)
+{
+    .formulario{
+        margin: auto;
+        width: 520px;
+        margin-top: 70px;
+        border-radius: 3%;
+    }
+
+   
+    
+    
+    }
+   
+    .menu{
+        background-color: #d0f4b9;
+        text-decoration: none;
+        padding: 1px 11px;
+        display: block;
+  list-style: none;
+  padding: 0;
+  width: 37%;
+  max-width: 1000px;
+  margin: right;
+}
+.menu li a{
+  text-decoration: none;
+  color: #1a2537;
+  padding: 10px;
+  display: block;
+}
+
+.menu li{
+  display: inline-block;
+  text-align: center; 
+}
+
+    </style>
+
+
+</head>  
+<body>
+
+    <ul class="menu">
+        
+        <li><a href="/updateproduct">Actualizar producto</a></li>
+        <li> - </li>
+        <li><a href="/deleteproduct">Eliminar producto</a></li>  
+        <li> - </li>   
+        <li><a href="/getproduct">Tabla de productos</a></li> 
+      </ul>
+
+ <form class="formulario" action="/product" method="POST">
+    
+    <h1>Registro de productos</h1>
+     <div class="contenedor">
+
+     <div class="input-contenedor">
+         <i class="fas fa-user icon"></i>
+         <input type="text" name="name" placeholder="Nombre">
+         </div>
+         
+    <div class="input-contenedor">
+        <i class="fas fa-band-aid"></i>
+        <input type="text" name="brand" placeholder="Marca">
+        </div>
+    
+    <div class="input-contenedor">
+        <i class="fas fa-shopping-bag"></i>
+        <input type="text" name="presentation" placeholder="Presentación">
+        </div>
+
+    <div class="input-contenedor">
+        <i class="fas fa-clipboard-list"></i>
+            <select name="category">
+                <option disabled selected="">Selecione la categoria.</option>
+                <option>Viveres en general</option>
+                <option>Frutas y verduras</option>
+                <option>Panaderia</option>
+                <option>Carnes</option>
+                <option>Productos de aseo</option>
+                <option>Comestibles</option>
+            </select>
+        </div>
+
+    <div class="input-contenedor">
+        <i class="fas fa-dollar-sign"></i>
+        <input type="text" name="price" placeholder="Precio">
+        </div>
+
+    <div class="input-contenedor">
+        <i class="fas fa-sort-numeric-up-alt"></i>
+        <input type="text" name="amount" placeholder="Cantidad">
+        </div>
+
+    <div class="input-contenedor">
+        <i class="fas fa-calendar-week"></i>
+        <input type="text" name="due_date" placeholder="Fecha de vencimiento">
+        </div>
+
+    <div class="input-contenedor">
+        <i class="fas fa-truck-moving"></i>
+        <input type="text" name="income_type" placeholder="Tipo de proveedor">
+        </div>
+
+    <div class="input-contenedor">
+        <i class="fas fa-dolly"></i>
+        <input type="text" name="supplier" placeholder="Proveedor">
+        </div>
+
+    <div class="input-contenedor">
+        <i class="fas fa-map-marked-alt"></i>
+        <input type="text" name="location" placeholder="Localización">
+        </div>
+        
+        <cennter>
+            <p></p>
+        <input type="checkbox" id="termsAndConditions">
+        <label for="termsAndConditions">¿Los datos ingresados son correctos? </label>
+        </cennter>
+            <p></p>
+         <input type="submit" value="Registrar productos" class="button">
+         
+        
+     </div>
+    </form>
+    <br>
+    
+</body>
+</html>

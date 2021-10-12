@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+      <title>Tabla de Productos</title>
+      <style type="text/css">
+      
+      body {
+        background-image: url(https://www.cuadrosguapos.com/images/product_images/popup_images/8641_0_MK_bodegon_frutas_verduras.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+
+      }
+
+      table, tr, th, td {
+        width: 100%;
+        background-color: #d0f4b9;
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      tr, th, td {
+        padding: 8px;
+        text-align: center;
+      }
+
+
+      .menu{
+        background-color: #d0f4b9;
+        text-decoration: none;
+        padding: 1px 11px;
+        display: block;
+  list-style: none;
+  padding: 0;
+  width: 36%;
+  max-width: 1000px;
+  margin: right;
+}
+.menu li a{
+  text-decoration: none;
+  color: #1a2537;
+  padding: 10px;
+  display: block;
+}
+
+.menu li{
+  display: inline-block;
+  text-align: center; 
+}
+      </style>
+
+      
+    </head>
+    <body>
+
+      <ul class="menu">
+        
+        <li><a href="/updateproduct">Actualizar producto</a></li>
+        <li> - </li>
+        <li><a href="/deleteproduct">Eliminar producto</a></li>  
+        <li> - </li>   
+        <li><a href="/product">Registrar producto</a></li> 
+      </ul>
+      <br>
+        <table>            
+            <tr>
+              <th>id</th>
+              <th>Nombre</th>
+              <th>Marca</th>
+              <th>Presentación</th>
+              <th>Categoria</th>
+              <th>Precio</th>
+              <th>Cantidad</th>
+              <th>Fecha de vencimiento</th>
+              <th>Tipo de ingreso</th>
+              <th>Proveedor</th>
+              <th>Localización</th>
+              
+
+
+            </tr>
+        {% for product in products %}
+            <tr>
+              <td>{{product.id}}</td>
+              <td>{{product.name}}</td>
+              <td>{{product.brand}}</td>
+              <td>{{product.presentation}}</td>
+              <td>{{product.category}}</td>
+              <td>{{product.price}}</td>
+              <td>{{product.amount}}</td>
+              <td>{{product.due_date}}</td>
+              <td>{{product.income_type}}</td>
+              <td>{{product.supplier}}</td>
+              <td>{{product.location}}</td>
+            </tr>
+            {% endfor %}
+          </table>
+    </body>
+</html>
