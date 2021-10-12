@@ -6,6 +6,8 @@ import datetime
 
 
 app = Flask(__name__)
+PORT=5000
+DEBUG=False
 
 # 'postgresql://<usuario>:<contraseña>@<direccion de la db>:<puerto>/<nombre de la db>
 
@@ -184,5 +186,5 @@ def delete_product():
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(port=PORT, debug=DEBUG)
 
